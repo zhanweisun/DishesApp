@@ -255,6 +255,7 @@ public class DBHelper extends SQLiteOpenHelper
         insertData(db, "妈妈炖菜", "2200", "1900");
         insertData(db, "石锅千页豆腐", "4200", "3800");
         insertData(db,"红烧鲤鱼","3900","3900");
+        insertData(db,"排骨土豆烧豆角","5200","4800");
     }
 
 
