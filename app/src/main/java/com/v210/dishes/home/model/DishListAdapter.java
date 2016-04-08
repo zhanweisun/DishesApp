@@ -46,6 +46,15 @@ public class DishListAdapter extends RecyclerView.Adapter<DishListAdapter.DishVi
         return dishList;
     }
     ArrayList<DishBean> result  =new ArrayList<DishBean>();
+
+
+    public void addToList(DishBean bean )
+    {
+        backupList.add(bean);
+        dishList.add(bean);
+        notifyDataChanged();
+    }
+
     public ArrayList<DishBean> getSelectedDishes()
     {
         result.clear();

@@ -121,12 +121,24 @@ public class HomeActivity extends Activity implements IHomeView, NotifyAdapterCh
         dataChanged(null);
     }
 
-
+    private static final int REQUEST_CODE=2000;
     public void onItem1Click(View view)
     {
         Intent mIntent = new Intent(this, AddActivity.class);
-        startActivity(mIntent);
+        startActivityForResult(mIntent,REQUEST_CODE);
         actionMenu.close(true);
+    }
+
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data)
+    {
+        if (requestCode==REQUEST_CODE&&resultCode == 1000&&data!=null)
+        {
+            String name  = data.getStringExtra("Name");
+            DishBean bean =  dbHelper.getByName(name);
+            presenter.getDishListAdapter().addToList(bean);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void onItem2Click(View view)

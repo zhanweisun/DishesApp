@@ -255,6 +255,7 @@ public class DBHelper extends SQLiteOpenHelper
         insertData(db, "妈妈炖菜", "2200", "1900");
         insertData(db, "石锅千页豆腐", "4200", "3800");
         insertData(db,"红烧鲤鱼","3900","3900");
+        insertData(db,"排骨土豆烧豆角","5200","4800");
     }
 
 
@@ -289,19 +290,17 @@ public class DBHelper extends SQLiteOpenHelper
     }
 
 
-    public DishBean getByCreateTime(long createTime)
+    public DishBean getByName(String name)
     {
-        Cursor cursor = null;
-        SQLiteDatabase db = this.getWritableDatabase();
-        cursor = db.rawQuery("select * from " + DBHelper.TABLE_NAME + " where createTime=" + String.valueOf(createTime), null);
+        Cursor cursor=null;
+        SQLiteDatabase db =this.getReadableDatabase();
+        cursor=db.rawQuery("select * from " + DBHelper.TABLE_NAME + " where name = '"+name.trim()+ "'",null);
         if (cursor != null && cursor.getCount() > 0)
         {
             if (cursor.moveToNext())
             {
                 DishBean bean = new DishBean();
-
                 fillBean(cursor, bean);
-
                 return bean;
             }
             cursor.close();
@@ -309,7 +308,6 @@ public class DBHelper extends SQLiteOpenHelper
         }
         return null;
     }
-
 
     /**
      * 将cursor数据填充到bean

@@ -1,6 +1,7 @@
 package com.v210.dishes.add.view;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,6 +29,7 @@ public class AddActivity extends Activity implements IAddView
     private EditText pinyinHead;
     private String pinyinStr;
     private String pinyinHeadStr;
+    public   static final int RESULT_CODE=1000;
     private View.OnClickListener saveClick = new View.OnClickListener()
     {
         public void onClick(View v)
@@ -86,6 +88,9 @@ public class AddActivity extends Activity implements IAddView
             DBHelper dbHelper = new DBHelper(AddActivity.this);
             addPresenter.writeToDatabase(dbHelper,dishName,price,vipPrice,pinyinFullStr,pinyinHeadStr);
             Utils.makeToast(AddActivity.this, "添加成功");
+            Intent intent =new Intent();
+            intent.putExtra("Name",dishName);
+            AddActivity.this.setResult(RESULT_CODE,intent);
             AddActivity.this.finish();
         }
     };
