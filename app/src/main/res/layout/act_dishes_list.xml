@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:orientation = "vertical"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent" >
+        <FrameLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "48dp"
+                android:background = "@color/primary"
+                >
+        <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:textAppearance = "?android:attr/textAppearanceLarge"
+                android:text = "@string/dish_name"
+                android:textColor = "@color/icons"
+                android:layout_gravity = "center" />
+        <ImageView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginLeft = "8dp"
+                android:id = "@+id/close"
+                android:src = "@drawable/back_selector"
+                android:layout_gravity = "left|center_vertical" />
+    </FrameLayout >
+
+    <android.support.v7.widget.RecyclerView
+            android:id = "@+id/recycler_view"
+            android:scrollbars = "vertical"
+            android:dividerHeight = "1px"
+            android:layout_weight = "1"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            />
+</LinearLayout >

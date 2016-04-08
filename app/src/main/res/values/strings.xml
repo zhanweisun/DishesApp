@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <string name = "app_name" >开吃</string >
+    <string name="add">添加</string>
+    <string name="save">保存</string>
+    <string name="dish_name">菜品名称</string>
+    <string name = "input">输入</string>
+    <string name = "input_content">请输入数量</string>
+    <string name = "input_prefill">1</string>
+</resources >

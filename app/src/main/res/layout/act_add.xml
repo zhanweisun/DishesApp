@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:orientation = "vertical"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent" >
+    <FrameLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "48dp"
+            android:background = "@color/primary"
+            >
+
+        <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:textAppearance = "?android:attr/textAppearanceLarge"
+                android:text = "@string/add"
+                android:textColor = "@color/icons"
+                android:layout_gravity = "center" />
+        <ImageView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginLeft = "8dp"
+                android:id = "@+id/close"
+                android:src="@drawable/back_selector"
+                android:layout_gravity = "left|center_vertical" />
+        <TextView
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginRight = "8dp"
+                android:textAppearance = "?android:attr/textAppearanceSmall"
+                android:text = "@string/save"
+                android:id = "@+id/save"
+                android:textColor = "@color/icons"
+                android:layout_gravity = "right|center_vertical" />
+    </FrameLayout >
+    <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/editText1"
+            android:layout_gravity = "center_horizontal"
+            android:layout_marginLeft = "16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight = "36dp"
+            android:background = "@drawable/edit_selector"
+            android:drawableLeft="@drawable/dish"
+            android:drawablePadding="4dp"
+            android:hint="@string/dish_name"/>
+    <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/editText2"
+            android:layout_gravity = "center_horizontal"
+            android:layout_marginLeft = "16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight = "36dp"
+            android:background = "@drawable/edit_selector"
+            android:drawableLeft="@drawable/yuan"
+            android:drawablePadding="4dp"
+            android:hint="价格"
+            android:inputType="numberDecimal"/>
+    <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/editText3"
+            android:layout_gravity = "center_horizontal"
+            android:layout_marginLeft = "16dp"
+            android:layout_marginRight="16dp"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight = "36dp"
+            android:background = "@drawable/edit_selector"
+            android:drawableLeft="@drawable/yuan"
+            android:hint="会员价格"
+            android:inputType="numberDecimal"/>
+    <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/editText4"
+            android:layout_gravity = "center_horizontal"
+            android:layout_marginLeft = "16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:drawablePadding="4dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight = "36dp"
+            android:drawableLeft="@drawable/alphabeta"
+            android:background = "@drawable/edit_selector"
+            android:hint="拼音名称"/>
+    <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:id = "@+id/editText5"
+            android:layout_gravity = "center_horizontal"
+            android:layout_marginLeft = "16dp"
+            android:drawablePadding="4dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:minHeight = "36dp"
+            android:drawableLeft="@drawable/alphabeta"
+            android:background = "@drawable/edit_selector"
+            android:hint="拼音首字母"/>
+</LinearLayout >

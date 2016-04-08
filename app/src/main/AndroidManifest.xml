@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android = "http://schemas.android.com/apk/res/android"
+          package = "com.v210.dishes"
+          android:versionCode = "1"
+          android:versionName = "1.0" >
+    <uses-sdk android:minSdkVersion = "19" />
+    <uses-permission android:name = "android.permission.WAKE_LOCK"/>
+    <application
+            android:label = "@string/app_name"
+            android:theme = "@android:style/Theme.Light"
+            android:icon = "@drawable/ic_launcher" >
+        <activity
+                android:name = ".home.view.HomeActivity"
+                android:configChanges = "keyboardHidden|orientation"
+                android:screenOrientation = "portrait" >
+            <intent-filter >
+                <action android:name = "android.intent.action.MAIN" />
+                <category android:name = "android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+
+        <activity
+                android:name = ".add.view.AddActivity"
+                android:configChanges = "keyboardHidden|orientation"
+                android:screenOrientation = "portrait" />
+        <activity
+                android:name = ".list.view.DishesListActivity"
+                android:configChanges = "keyboardHidden|orientation"
+                android:screenOrientation = "portrait" />
+    </application >
+</manifest >
