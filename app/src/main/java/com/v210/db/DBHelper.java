@@ -256,6 +256,24 @@ public class DBHelper extends SQLiteOpenHelper
         insertData(db, "石锅千页豆腐", "4200", "3800");
         insertData(db,"红烧鲤鱼","3900","3900");
         insertData(db,"排骨土豆烧豆角","5200","4800");
+        insertData(db,"春笋炒咸肉","3600","3600");
+        insertData(db,"香椿摊鸡蛋","2600","2600");
+        insertData(db,"干锅腊肉","4200","3800");
+        insertData(db,"钵子莴笋","2600","2200");
+        insertData(db,"滋补酱蹄花","900","800");
+        insertData(db,"养生豆干丝","2600","2200");
+        insertData(db,"烧椒小皮蛋","2600","2200");
+        insertData(db,"鸭梨吊烧鸡","6200","5800");
+        insertData(db,"臭桂鱼","8800","7800");
+        insertData(db,"青椒肥肠鸭血","3800","3600");
+        insertData(db,"压锅牛蛙","7800","6800");
+        insertData(db,"压锅鸡","4800","4200");
+        insertData(db,"干锅豆笋","3200","3900");
+        insertData(db,"蒜蓉粉丝鸡尾虾","5600","4800");
+        insertData(db,"成都冒菜","5800","5600");
+        insertData(db,"干锅牛三宝","6200","5800");
+        insertData(db,"小炒鸡鸭杂","2600","2200");
+        insertData(db,"酸菜芦笋","4200","3200");
     }
 
 
